@@ -52,6 +52,9 @@
     <div class="container-fluid" id="slider">
         <div class="first_slide slide">
             <img src="img/1.png" alt="" id="image">
+            <div class="back">
+                <img src="img/button.png" id="next-slide">
+            </div>
             <div class="shadow"></div>
         </div>
         <div class="second_slide slide">
@@ -119,9 +122,21 @@
         $(window).on('load', function () {
             imageWidth = $('#image').width();
             $('.shadow').css('width', imageWidth);
+            $('.back').css('width', imageWidth);
             $('#preloader').fadeOut('slow');
         });
 
+        $(window).on('resize',function() {
+            imageWidth = $('#image').width();
+            $('.shadow').css('width', imageWidth);
+            $('.back').css('width', imageWidth);
+        });
+
+        $('#next-slide').on('click', function () {
+            $('#link1').removeClass('active');
+            $('#link2').addClass('active');
+            Slide(2);
+        });
 
         $('#slider').bind('mousewheel DOMMouseScroll', function (e) {
 
@@ -354,6 +369,6 @@
 
     });
 
-</script>
+
 </body>
 </html>
