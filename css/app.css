@@ -1,4 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@charset "UTF-8";
+
+@font-face {
+  font-family: HalveticaLight;
+  /* Имя шрифта */
+  src: url(../fonts/HelveticaLight.ttf?f159abc7f8afd6d349407415bed116ca);
+  /* Путь к файлу со шрифтом */
+}
+
+/*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -9998,17 +10007,71 @@ body {
   overflow: hidden !important;
 }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+#preloader img {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  height: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  z-index: 100;
+  font-family: HalveticaLight;
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+header .menu {
+  color: #a2a2a2;
+  cursor: pointer;
+  text-align: center;
+}
+
+header .menu .active {
+  color: white;
+}
+
+header .menu .link:hover {
+  color: white;
+}
+
+header .lang {
+  text-align: center;
+}
+
+#slider {
+  position: fixed;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .slide,
 .slide img {
   width: auto;
-  height: 100vh;
+  height: calc(100vh - 80px);
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .shadow {
-  height: 100vh;
+  height: calc(100vh - 80px);
   position: absolute;
   top: 0;
   left: 0;
@@ -10073,5 +10136,48 @@ body {
 
 .fifth_slide .shadow {
   z-index: 0;
+}
+
+footer {
+  background-color: black;
+  width: 100vw;
+  color: #a2a2a2;
+  z-index: 100;
+  font-family: HalveticaLight;
+  font-size: 15px;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer img {
+  padding-right: 10px;
+}
+
+@media (max-width: 991.98px) {
+  .menu .link {
+    padding: 0 10px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mobile {
+    background-color: black;
+    color: white;
+  }
+
+  .mobile .row {
+    height: 100vh;
+    text-align: center;
+  }
+
+  .mobile .row img {
+    height: 100px;
+  }
 }
 
