@@ -3,7 +3,7 @@
 @font-face {
   font-family: HalveticaLight;
   /* Имя шрифта */
-  src: url(../fonts/HelveticaLight.ttf?f159abc7f8afd6d349407415bed116ca);
+  src: url(../fonts/HelveticaLight.ttf);
   /* Путь к файлу со шрифтом */
 }
 
