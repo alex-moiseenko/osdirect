@@ -3,7 +3,21 @@
 @font-face {
   font-family: HalveticaLight;
   /* Имя шрифта */
-  src: url(../fonts/HelveticaLight.ttf);
+  src: url(../fonts/HelveticaLight.ttf?f159abc7f8afd6d349407415bed116ca);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: FuturaBookC;
+  /* Имя шрифта */
+  src: url(../fonts/futurabookc.otf?363c763618808869720c6ca7b4059566);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: FuturaDemiC;
+  /* Имя шрифта */
+  src: url(../fonts/futurademic.otf?fa7892c650d8237d04043b1cf3cdc49f);
   /* Путь к файлу со шрифтом */
 }
 
@@ -10040,7 +10054,7 @@ header {
 header .menu {
   color: #a2a2a2;
   cursor: pointer;
-  text-align: center;
+  text-align: right;
 }
 
 header .menu .active {
@@ -10073,16 +10087,7 @@ header .lang {
 .back {
   height: 100%;
   position: relative;
-  z-index: 20;
-}
-
-.back #next-slide {
-  height: 15%;
-  z-index: 100;
-  position: relative;
-  top: 45%;
-  left: 35%;
-  cursor: pointer;
+  font-family: FuturaBookC, sans-serif;
 }
 
 .shadow {
@@ -10097,12 +10102,71 @@ header .lang {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=1 );
 }
 
+.head {
+  position: absolute;
+  text-align: center;
+  z-index: 32;
+}
+
+.head img {
+  display: block;
+  height: 16vh;
+}
+
+.head span {
+  display: block;
+  text-align: center;
+}
+
+.head .name {
+  font-size: 1.4vh;
+  font-family: FuturaDemiC;
+  top: 38%;
+  letter-spacing: 0.08vh;
+}
+
+.head .position {
+  font-size: 1.4vh;
+  position: relative;
+  top: -0.3vh;
+  letter-spacing: 0.08vh;
+}
+
 .first_slide img {
-  z-index: 9;
+  z-index: 51;
 }
 
 .first_slide .shadow {
-  z-index: 8;
+  z-index: 50;
+}
+
+.first_slide .back1 {
+  z-index: 52;
+}
+
+.first_slide .back1 span {
+  position: absolute;
+  top: 35.5%;
+  font-size: 2.55vh;
+  left: 33.4%;
+  text-transform: uppercase;
+}
+
+.first_slide .back1 p {
+  top: 40%;
+  left: 33.5%;
+  position: absolute;
+  font-size: 1.65vh;
+  line-height: 1.9vh;
+}
+
+.first_slide .back1 #next-slide {
+  height: 15%;
+  z-index: 100;
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  cursor: pointer;
 }
 
 .second_slide {
@@ -10110,11 +10174,31 @@ header .lang {
 }
 
 .second_slide img {
-  z-index: 7;
+  z-index: 41;
 }
 
 .second_slide .shadow {
-  z-index: 6;
+  z-index: 40;
+}
+
+.second_slide .back2 {
+  z-index: 42;
+}
+
+.second_slide .back2 p {
+  z-index: 43;
+  position: absolute;
+  left: 8.8%;
+  top: 11.8%;
+  font-size: 1.4vh;
+  line-height: 1.7vh;
+}
+
+.second_slide .back2 img {
+  height: 59.5vh;
+  left: 7.5%;
+  top: 9.8%;
+  position: absolute;
 }
 
 .third_slide {
@@ -10122,11 +10206,75 @@ header .lang {
 }
 
 .third_slide img {
-  z-index: 5;
+  z-index: 31;
 }
 
 .third_slide .shadow {
-  z-index: 4;
+  z-index: 30;
+}
+
+.third_slide .back3 .head1 {
+  left: 8%;
+  top: 14.8%;
+}
+
+.third_slide .back3 .head1 img {
+  height: 20vh !important;
+}
+
+.third_slide .back3 .head2 {
+  left: 19.25%;
+  top: 19.1%;
+}
+
+.third_slide .back3 .head3 {
+  left: 28.25%;
+  top: 19.1%;
+}
+
+.third_slide .back3 .head4 {
+  left: 37.25%;
+  top: 19.1%;
+}
+
+.third_slide .back3 .head5 {
+  left: 46.25%;
+  top: 19.1%;
+}
+
+.third_slide .back3 .head6 {
+  top: 43.5%;
+  left: 8%;
+}
+
+.third_slide .back3 .head7 {
+  top: 43.5%;
+  left: 17.5%;
+}
+
+.third_slide .back3 .head8 {
+  top: 43.5%;
+  left: 26.5%;
+}
+
+.third_slide .back3 .head9 {
+  top: 43.5%;
+  left: 35.5%;
+}
+
+.third_slide .back3 .head10 {
+  top: 68%;
+  left: 8%;
+}
+
+.third_slide .back3 .head11 {
+  top: 68%;
+  left: 17.5%;
+}
+
+.third_slide .back3 .head12 {
+  top: 68%;
+  left: 27%;
 }
 
 .forth_slide {
@@ -10134,11 +10282,11 @@ header .lang {
 }
 
 .forth_slide img {
-  z-index: 3;
+  z-index: 21;
 }
 
 .forth_slide .shadow {
-  z-index: 2;
+  z-index: 20;
 }
 
 .fifth_slide {
@@ -10146,11 +10294,52 @@ header .lang {
 }
 
 .fifth_slide img {
-  z-index: 1;
+  z-index: 11;
 }
 
 .fifth_slide .shadow {
-  z-index: 0;
+  z-index: 10;
+}
+
+.fifth_slide .back5 img {
+  display: block;
+  position: absolute;
+  top: 22.5%;
+  left: 8.5%;
+  height: 9.5vh;
+}
+
+.fifth_slide .back5 p {
+  position: absolute;
+  z-index: 12;
+}
+
+.fifth_slide .back5 .address {
+  top: 38%;
+  left: 8.5%;
+  font-size: 2.5vh;
+  line-height: 3.3vh;
+  letter-spacing: 0.08vh;
+}
+
+.fifth_slide .back5 .phone {
+  top: 47.5%;
+  left: 8.5%;
+  font-size: 2.5vh;
+  line-height: 3.3vh;
+  letter-spacing: 0.08vh;
+}
+
+.fifth_slide .back5 .phone a {
+  display: block;
+  color: black;
+}
+
+.fifth_slide .back5 .email {
+  top: 57%;
+  left: 8.5%;
+  text-decoration: underline;
+  font-size: 2.5vh;
 }
 
 footer {
@@ -10168,6 +10357,10 @@ footer {
 
 footer img {
   padding-right: 10px;
+}
+
+footer a {
+  color: #a2a2a2;
 }
 
 @media (max-width: 991.98px) {
